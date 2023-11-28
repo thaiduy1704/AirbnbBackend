@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace PlatformApi.Controllers
 {
    [ApiVersion("1.0")]
-   [Authorize]
+
    public class RoomController : BaseController
    {
       private readonly ILogger<RoomController> _logger;
@@ -22,10 +22,15 @@ namespace PlatformApi.Controllers
          var result = await _roomService.GetAllRoomListService(cancellationToken);
          return Ok(result);
       }
-      [HttpGet("{id}")]
+      [HttpGet("ById/{id}")]
       public async Task<IActionResult> GetRoomById([FromRoute] Guid id, CancellationToken cancellationToken)
       {
          var result = await _roomService.GetRoomByIdService(id, cancellationToken);
+         return Ok(result);
+      }
+      [HttpGet("ByLocation/{LocationId}")]
+      public async Task<IActionResult> GetAllRoomByLocationId([FromRoute] Guid LocationId , CancellationToken cancellationToken){
+         var result = await _roomService.GetAllRoomByLocationIdService(LocationId,cancellationToken);
          return Ok(result);
       }
       [HttpPost]

@@ -36,7 +36,7 @@ namespace Core.Services
 
          CreateUserResponse response = _mapper.Map<ApplicationUser, CreateUserResponse>(user);
          var roleList = await _userManager.GetRolesAsync(user);
-         response.RoleList = roleList;
+         response.RoleList = (List<string>)roleList;
 
          return response;
       }

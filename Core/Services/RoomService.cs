@@ -13,6 +13,7 @@ namespace Core.Services
       Task<List<CreateRoomResponse>> GetAllRoomListService(CancellationToken cancellationToken);
       Task<CreateRoomResponse> DeleteRoomByIdService(Guid id, CancellationToken cancellationToken);
       Task<CreateRoomResponse> UpdateRoomByIdService(Guid id, UpdateRoomRequest request, CancellationToken cancellationToken);
+      Task<List<CreateRoomResponse>> GetAllRoomByLocationIdService(Guid LocationId, CancellationToken cancellationToken);
    }
    public class RoomService : IRoomService
    {
@@ -63,5 +64,19 @@ namespace Core.Services
          var response = _mapper.Map<Room, CreateRoomResponse>(updatedRoom);
          return response;
       }
-   }
+
+        public async Task<List<CreateRoomResponse>> GetAllRoomByLocationIdService(Guid LocationId, CancellationToken cancellationToken)
+        {
+            var roomList =await _roomRepository.GetAllRoomListByLocationIdAsync(LocationId,cancellationToken);
+            var response = new List<CreateRoomResponse>();
+
+            foreach (var room in roomList)
+            {
+               response.Add(_mapper.Map<Room,CreateRoomResponse>(room));
+               
+            }
+            return response;
+
+        }
+    }
 }

@@ -185,5 +185,12 @@ namespace Infrastructure.Repositories
          }
          return createdImageList;
       }
-   }
+
+        public async Task<List<Room>> GetAllRoomListByLocationIdAsync(Guid LocationId, CancellationToken cancellationToken)
+        {
+            var roomList = await _context.Room.Include(item => item.Location).Include(item => item.ImageList).Include(item => item.Owner).Where(room => room.Location.Id == LocationId).ToListAsync(cancellationToken);
+            
+         return roomList;
+        }
+    }
 }

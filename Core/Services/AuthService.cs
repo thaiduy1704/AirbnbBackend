@@ -78,23 +78,43 @@ namespace Core.Services
       }
       public async Task<CreateUserResponse> LoginService(LoginRequest request, CancellationToken cancellationToken)
       {
-         var user = await _userManager.FindByNameAsync(request.Email) ?? throw new ValidationException("User not found !");
-         var result = await _signInManager.PasswordSignInAsync(request.Email, request.Password, isPersistent: true, lockoutOnFailure: true);
-
-         if (result.IsLockedOut)
          {
-            throw new ValidationException($"You have tried to login too many times, please try again in {_userManager.Options.Lockout.DefaultLockoutTimeSpan} minutes");
-         }
-         if (!result.Succeeded)
-         {
-            throw new ValidationException($"Wrong Password! You have tried {user.AccessFailedCount} times");
+            var user = await _userManager.FindByNameAsync(request.Email);
+
+
+            if (user == null)
+            {
+               throw new ValidationException("User not found !");
+            }
+            var rolename = await _userManager.GetRolesAsync(user);
+
+            var result = await _signInManager.PasswordSignInAsync(request.Email, request.Password, isPersistent: true, lockoutOnFailure: true);
+
+            if (result.IsLockedOut)
+            {
+               throw new ValidationException($"You have tried to login too many times, please try again in {_userManager.Options.Lockout.DefaultLockoutTimeSpan} minutes");
+            }
+            if (!result.Succeeded)
+            {
+               throw new ValidationException($"Wrong Password! You have tried {user.AccessFailedCount} times");
+            }
+            // var response = new CreateUserResponse
+            // {
+            //    PersonName = user.PersonName,
+            //    Address = user.Address,
+            //    ProfileImage = user.ProfileImage,
+            //    Description = user.Description,
+            //    IsMarried = user.IsMarried,
+            //    Roles = rolename.ToList()
+            // };
+            var response = new CreateUserResponse
+            {
+               User = user,
+               RoleList = rolename.ToList()
+            };
+            return response;
          }
 
-         CreateUserResponse response = _mapper.Map<ApplicationUser, CreateUserResponse>(user);
-         var roleList = await _userManager.GetRolesAsync(user);
-         response.RoleList = roleList;
-
-         return response;
       }
 
       public async Task<string> LogoutService(CancellationToken cancellationToken)

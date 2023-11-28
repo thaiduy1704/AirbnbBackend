@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace PlatformApi.Controllers
 {
    [ApiVersion("1.0")]
-   
+
    public class LocationController : BaseController
    {
       private readonly ILogger<LocationController> _logger;

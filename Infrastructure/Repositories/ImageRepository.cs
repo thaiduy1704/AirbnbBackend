@@ -51,7 +51,7 @@ namespace Infrastructure.Repositories
          {
             room = await _context.Room.FirstOrDefaultAsync(item => item.Id == request.RoomId, cancellationToken);
 
-            if (room == null) throw new ValidationException($"Room with Id {request.RoomId} not found !");
+            if (room == null) throw new NotFoundException($"Room with Id {request.RoomId} not found !");
          }
 
          var image = new Image()
@@ -135,6 +135,15 @@ namespace Infrastructure.Repositories
          await _context.SaveChangesAsync(cancellationToken);
 
          return image;
+      }
+
+      public async Task<string> UploadImageFileToBlobStorageAnotherAsync(Stream streamContent, string filename, string destinationContainerName)
+      {
+         var blobStorageContainer = _blobServiceClient.GetBlobContainerClient(destinationContainerName);
+         var blobStorageClient = blobStorageContainer.GetBlobClient(filename);
+         streamContent.Position = 0;
+         await blobStorageClient.UploadAsync(streamContent);
+         return blobStorageClient.Uri.AbsoluteUri;
       }
    }
 }
