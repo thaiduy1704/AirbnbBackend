@@ -1,0 +1,1227 @@
+{
+	"info": {
+		"_postman_id": "7f171cb4-ac89-446b-b8bf-79603e0317d6",
+		"name": "AirBnB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15072473"
+	},
+	"item": [
+		{
+			"name": "Room",
+			"item": [
+				{
+					"name": "Get Room By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}/room/84ce7159-0ffd-4728-bd0f-10e8b94d7066",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"room",
+								"84ce7159-0ffd-4728-bd0f-10e8b94d7066"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Room",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}/room",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"room"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Room",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "Room with multiple image 123",
+									"type": "text"
+								},
+								{
+									"key": "HomeType",
+									"value": "HomeType 1",
+									"type": "text"
+								},
+								{
+									"key": "RoomType",
+									"value": "RoomType 1",
+									"type": "text"
+								},
+								{
+									"key": "TotalOccupancy",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "TotalBedrooms",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "Summary",
+									"value": "Summary 1",
+									"type": "text"
+								},
+								{
+									"key": "Address",
+									"value": "Address 1",
+									"type": "text"
+								},
+								{
+									"key": "HasTV",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "HasKitchen",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "HasAircon",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "HasHeating",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "HasInternet",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "Price",
+									"value": "1230.212",
+									"type": "text"
+								},
+								{
+									"key": "Latitude",
+									"value": "3123",
+									"type": "text"
+								},
+								{
+									"key": "Longigude",
+									"value": "89231",
+									"type": "text"
+								},
+								{
+									"key": "LocationId",
+									"value": "860de3b2-1e61-456a-9cf6-98491047ae66",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "ImageList",
+									"type": "file",
+									"src": [
+										"/Users/macintoshhd/Desktop/Images/Eyes 1 - Philipe Cavalcante.jpg",
+										"/Users/macintoshhd/Desktop/Images/Eyes B - Ryan Holloway.jpg",
+										"/Users/macintoshhd/Desktop/Images/Levels 2 - Jeff Finley.jpg",
+										"/Users/macintoshhd/Desktop/Images/Screen Shot 2022-10-14 at 20.51.52.png",
+										"/Users/macintoshhd/Desktop/Images/Screen Shot 2022-10-14 at 20.52.44.png"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/room",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"room"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Room By Id",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "Room with multiple image update",
+									"type": "text"
+								},
+								{
+									"key": "HomeType",
+									"value": "HomeType 1",
+									"type": "text"
+								},
+								{
+									"key": "RoomType",
+									"value": "RoomType 1",
+									"type": "text"
+								},
+								{
+									"key": "TotalOccupancy",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "TotalBedrooms",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "Summary",
+									"value": "Summary 1",
+									"type": "text"
+								},
+								{
+									"key": "Address",
+									"value": "Address 1",
+									"type": "text"
+								},
+								{
+									"key": "HasTV",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "HasKitchen",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "HasAircon",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "HasHeating",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "HasInternet",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "Price",
+									"value": "1230.212",
+									"type": "text"
+								},
+								{
+									"key": "Latitude",
+									"value": "3123",
+									"type": "text"
+								},
+								{
+									"key": "Longigude",
+									"value": "89231",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "LocationId",
+									"value": "860de3b2-1e61-456a-9cf6-98491047ae66",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "ImageList",
+									"type": "file",
+									"src": [
+										"/Users/macintoshhd/Desktop/Images/Eyes 1 - Philipe Cavalcante.jpg",
+										"/Users/macintoshhd/Desktop/Images/Eyes B - Ryan Holloway.jpg",
+										"/Users/macintoshhd/Desktop/Images/Levels 2 - Jeff Finley.jpg",
+										"/Users/macintoshhd/Desktop/Images/Screen Shot 2022-10-14 at 20.51.52.png",
+										"/Users/macintoshhd/Desktop/Images/Screen Shot 2022-10-14 at 20.52.44.png"
+									],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/room/32748e9b-63d9-49e8-ad01-d0fc2ce07698",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"room",
+								"32748e9b-63d9-49e8-ad01-d0fc2ce07698"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Room By Id",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}/room/6e45b08a-cbbe-4260-a48b-2f4803e184b0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"room",
+								"6e45b08a-cbbe-4260-a48b-2f4803e184b0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"PersonName\" : \"Tuan Loc\",\n    \"Email\" : \"tuanloc235@gmail.com\",\n    \"Phone\" : \"0971719023\",\n    \"Password\" : \"Whystudy123@\",\n    \"ConfirmPassword\" : \"Whystudy123@\",\n    \"Address\" : \"123 Baker Street\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\" : \"tuanloc235@gmail.com\",\n    \"Password\" : \"Whystudy123@\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/auth/logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "AirBnBToken",
+								"value": "fsdfa",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/auth/restore",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Seed",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "AirBnBToken",
+								"value": "fsdfa",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/auth/seed",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"seed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Image",
+			"item": [
+				{
+					"name": "Upload A Single Image",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "File",
+									"type": "file",
+									"src": "/Users/macintoshhd/Desktop/Images/test.jpg"
+								},
+								{
+									"key": "Title",
+									"value": "AirBnB",
+									"type": "text"
+								},
+								{
+									"key": "Description",
+									"value": "Image Test 1",
+									"type": "text"
+								},
+								{
+									"key": "RoomId",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/image/upload-image",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"image",
+								"upload-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Image By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/image/db38a144-d9dd-48fd-be7e-381bfce360cb",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"image",
+								"db38a144-d9dd-48fd-be7e-381bfce360cb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Image By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/image/ea9a6bbc-d494-4c73-fe2d-08db69c80113",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"image",
+								"ea9a6bbc-d494-4c73-fe2d-08db69c80113"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Image By Id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "File",
+									"type": "file",
+									"src": "/Users/macintoshhd/Desktop/Images/Eyes 1 - Philipe Cavalcante.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/image/c6997b2b-7d4d-42e2-88c4-e841bd43039c",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"image",
+								"c6997b2b-7d4d-42e2-88c4-e841bd43039c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservation",
+			"item": [
+				{
+					"name": "Get Reservation List By Room Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/reservation?roomId=339fd991-e7e5-4e03-b9fd-3fff193260ce",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"reservation"
+							],
+							"query": [
+								{
+									"key": "roomId",
+									"value": "339fd991-e7e5-4e03-b9fd-3fff193260ce"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Reservation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserId\" : \"00ab8879-9bda-4d93-dd2d-08db695a4eaa\",\n    \"RoomId\" : \"339fd991-e7e5-4e03-b9fd-3fff193260ce\",\n    \"StartDate\" : \"04/12/2023\",\n    \"EndDate\" : \"05/12/2023\",\n    \"ToTalGuests\" : 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/reservation",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"reservation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Reservation By Id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"StartDate\" : \"04/12/2023\",\n    \"EndDate\" : \"05/12/2023\",\n    \"ToTalGuests\" : 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/reservation/b284abc6-3201-4bb1-970f-8fa32145cf54",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"reservation",
+								"b284abc6-3201-4bb1-970f-8fa32145cf54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Reservation By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/reservation/1cbc1692-4911-43ba-934c-7d924342c247",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"reservation",
+								"1cbc1692-4911-43ba-934c-7d924342c247"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Get Location By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/location/2443ddc2-27a5-4b6f-9368-eb4e8344f3ee",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"location",
+								"2443ddc2-27a5-4b6f-9368-eb4e8344f3ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/location",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "Location 2",
+									"type": "text"
+								},
+								{
+									"key": "Province",
+									"value": "Province 2",
+									"type": "text"
+								},
+								{
+									"key": "Country",
+									"value": "Thai Lan",
+									"type": "text"
+								},
+								{
+									"key": "File",
+									"type": "file",
+									"src": "/Users/macintoshhd/Desktop/Images/Levels 2 - Jeff Finley.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/location",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Location By Id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "Update Location 1",
+									"type": "text"
+								},
+								{
+									"key": "Province",
+									"value": "Update Province 1",
+									"type": "text"
+								},
+								{
+									"key": "Country",
+									"value": "Update Country 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/location/2443ddc2-27a5-4b6f-9368-eb4e8344f3ee",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"location",
+								"2443ddc2-27a5-4b6f-9368-eb4e8344f3ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Location By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/location/2443ddc2-27a5-4b6f-9368-eb4e8344f3ee",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"location",
+								"2443ddc2-27a5-4b6f-9368-eb4e8344f3ee"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Get All Reviews By RoomId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Title\" : \"Review Title\",\n    \"Comment\" : \"Review Comment\",\n    \"Rating\" : 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/review?roomId=339fd991-e7e5-4e03-b9fd-3fff193260ce",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"review"
+							],
+							"query": [
+								{
+									"key": "roomId",
+									"value": "339fd991-e7e5-4e03-b9fd-3fff193260ce"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Review By RoomId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Title\" : \"Review Title\",\n    \"Comment\" : \"Review Comment\",\n    \"Rating\" : 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/review?roomId=339fd991-e7e5-4e03-b9fd-3fff193260ce",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"review"
+							],
+							"query": [
+								{
+									"key": "roomId",
+									"value": "339fd991-e7e5-4e03-b9fd-3fff193260ce"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Review By Id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Title\" : \"Review Title\",\n    \"Comment\" : \"Review Comment\",\n    \"Rating\" : 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/review/5ff8ca3d-df72-4b9c-9129-6b5af601f5bd",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"review",
+								"5ff8ca3d-df72-4b9c-9129-6b5af601f5bd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Review By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Title\" : \"Review Title\",\n    \"Comment\" : \"Review Comment\",\n    \"Rating\" : 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/review/00ab8879-9bda-4d93-dd2d-08db695a4eaa",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"review",
+								"00ab8879-9bda-4d93-dd2d-08db695a4eaa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/get-user",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"get-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"CurrentPassword\" : \"Whystudy123@\",\n    \"NewPassword\" : \"Whystudy123@123\",\n    \"ConfirmPassword\" : \"Whystudy123@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/change-password",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\" : \"tuanloc235@gmail.com\",\n    \"NewPassword\" : \"Whystudy123@\",\n    \"ConfirmPassword\" : \"Whystudy123@\",\n    \"ResetPasswordToken\" : \"CfDJ8A5NlMiu1T9BkEsKYS2O8S45R31JA097NPfi2bncwLbI/V+9Yv6c3RfdyEr5Itg4ktOjlDRx23P5ERw968Yu1EZlVcznanZsdCpfLkwUZAv+WN71AJcTMHq+il15R7I/XMuwPqhz6tcwidOXLcCQDxwY3JN5NR0bK+W1I8jOaulo0JOww+jsV4X1GzEETV039gygUmFdJxhJtUwuNsepOoQvzvoCTkpk8eRaMLqhFvoG\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/reset-password",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Reset Password Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/get-reset-password-token",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"get-reset-password-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\" : \"tuanloc235@gmail.com\",\n    \"PersonName\" : \"NTLoc\",\n    \"Address\" : \"82 Pham Huu Chi\",\n    \"Profile Image\" : \"Profile Image\",\n    \"Description\" : \"I am Nguyen Tuan Loc\",\n    \"IsMarried\" : false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/update-user",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"update-user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Get Role List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/role",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Role By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/role/2bee370a-0b34-4f41-4bfb-08db9581e1d7",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"role",
+								"2bee370a-0b34-4f41-4bfb-08db9581e1d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"RoleName\" : \"User\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/role",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Role By Id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"RoleName\" : \"Admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/role/2bee370a-0b34-4f41-4bfb-08db9581e1d7",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"role",
+								"2bee370a-0b34-4f41-4bfb-08db9581e1d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/role/2bee370a-0b34-4f41-4bfb-08db9581e1d7",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"role",
+								"2bee370a-0b34-4f41-4bfb-08db9581e1d7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
